@@ -1,7 +1,7 @@
 # simple-budget
 
-This app is a collaborative work of the (freeCodeCamp
-Greenville)[https://fcc-greenville.com/] members.
+This app is a collaborative work of the [freeCodeCamp
+Greenville](https://fcc-greenville.com/) members.
 
 User stories:
 
