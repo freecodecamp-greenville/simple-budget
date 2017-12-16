@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Penny Pincher</title>
+
+    <!-- load stylesheets-->
+
+    <link rel="stylesheet" href="../static/Libraries/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
+    <link rel="stylesheet" href="../static/login.css">
+
+    <script src="../static/login.js"></script>
+</head>
+<body>
+{% block body %}
+    {% if session['logged_in'] %}
+        <p>You're logged in already!</p>
+    {% else %}
+        <form action="/login" method="POST">
+            <div class="login">
+                <div class="login-screen">
+                    <div class="app-title">
+                        <h1>Penny Pincher</h1>
+                        <p>--The financial planning app that your wallet always deserved</p>
+                        <br>
+                        <br>
+                        <h2>Login</h2>
+                    </div>
+
+
+                    <div class="login-form">
+                        <div class="control-group">
+                            <input type="text" class="login-field" value="" placeholder="email address" name="username">
+                            <label class="login-field-icon fui-user" for="login-name"></label>
+                        </div>
+
+                        <div class="control-group">
+                            <input type="password" class="login-field" value="" placeholder="password" name="password">
+                            <label class="login-field-icon fui-lock" for="login-pass"></label>
+                        </div>
+
+                        <input type="submit" value="Log in" id="submitButton" onclick="login()"
+                               class="btn btn-primary btn-large btn-block">
+                        <br>
+                    </div>
+                     <button type="button" class="btn btn-outline-info">Register</button>
+            <button type="button" class="btn btn-outline-info">Forgot Password?</button>
+                </div>
+
+            </div>
+
+        </form>
+
+
+
+
+
+
+
+    {% endif %}
+{% endblock %}
+
+
+
+
+<script src="../static/Libraries/Bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
