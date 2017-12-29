@@ -1,3 +1,46 @@
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +48,7 @@
     <meta charset="utf-8">
     <title>Penny Pincher</title>
 
-    <!-- load stylesheets-->
+    &lt;!&ndash; load stylesheets&ndash;&gt;
 
     <link rel="stylesheet" href="../static/Libraries/Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../static/style.css" type="text/css">
@@ -18,12 +61,12 @@
     {% if session['logged_in'] %}
         <p>You're logged in already!</p>
     {% else %}
-        <form action="/login" method="POST">
+        <form action="/" method="POST">
             <div class="login">
                 <div class="login-screen">
                     <div class="app-title">
                         <h1>Penny Pincher</h1>
-                        <p>--The financial planning app that your wallet always deserved</p>
+                        <p>&#45;&#45;The financial planning app that your wallet always deserved</p>
                         <br>
                         <br>
                         <h2>Login</h2>
@@ -32,12 +75,12 @@
 
                     <div class="login-form">
                         <div class="control-group">
-                            <input type="text" class="login-field" value="" placeholder="email address" name="username">
+                            <input type="text" class="login-field" value="" placeholder="email address" name="username" required>
                             <label class="login-field-icon fui-user" for="login-name"></label>
                         </div>
 
                         <div class="control-group">
-                            <input type="password" class="login-field" value="" placeholder="password" name="password">
+                            <input type="password" class="login-field" value="" placeholder="password" name="password" required>
                             <label class="login-field-icon fui-lock" for="login-pass"></label>
                         </div>
 
@@ -68,3 +111,4 @@
 <script src="../static/Libraries/Bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
+-->
